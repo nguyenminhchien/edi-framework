@@ -225,7 +225,7 @@ class EDIExchangeRecord(models.Model):
             rec_name = rec.identifier
             if rec.res_id and rec.model:
                 rec_name = rec.record.display_name
-            name = "[{}] {}".format(rec.type_id.name, rec_name)
+            name = f"[{rec.type_id.name}] {rec_name}"
             result.append((rec.id, name))
         return result
 
